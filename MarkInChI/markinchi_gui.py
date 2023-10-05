@@ -17,7 +17,7 @@ from markinchi import MarkInChI
 from label import Label
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'markmol2markinchi'))
 from zz_convert import zz_convert
-from markmol import MarkMol
+from markmol import MarkMol as markmol
 
 try:
     CDIR = os.path.abspath(os.path.dirname(__file__))
