@@ -54,7 +54,7 @@ class MarkinchiGuiApp(object):
         # Build scrollabrs from XML
         my_scrollbar = builder.get_object('scrollbar1')
         h_scrollbar = builder.get_object('scrollbar3')
-
+        
         """ Put the scrollbar on the y axis of the
             canvas and activate it in the canvax"""
 
