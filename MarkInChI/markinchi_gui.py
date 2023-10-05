@@ -2,10 +2,10 @@ import os, sys, traceback
 import tkinter as tk
 import tkinter.ttk as ttk
 # Import pygubu objects necessary for pyinstaller to work
-import pygubu.builder.tkstdwidgets
-import pygubu.builder.ttkstdwidgets
-import pygubu.builder.widgets.scrollbarhelper
-import pygubu.builder.widgets.tkscrollbarhelper
+#import pygubu.builder.tkstdwidgets
+#import pygubu.builder.ttkstdwidgets
+#import pygubu.builder.widgets.scrollbarhelper
+#import pygubu.builder.widgets.tkscrollbarhelper
 from tkinter import messagebox, ANCHOR, PhotoImage, NW, Scrollbar, END
 from PIL import ImageTk,Image
 import pygubu
@@ -17,7 +17,7 @@ from markinchi import MarkInChI
 from label import Label
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'markmol2markinchi'))
 from zz_convert import zz_convert
-from markmol import markmol
+from markmol import MarkMol
 
 try:
     CDIR = os.path.abspath(os.path.dirname(__file__))
@@ -113,6 +113,7 @@ class MarkinchiGuiApp(object):
                 i = 1
                 print(f"Number of inchi produced: {len(list_of_inchi)}")
                 for inchi in list_of_inchi:
+                    print(inchi)
                     self.listbox.insert(i, inchi)
                     i += 1
             except AttributeError as msg:
