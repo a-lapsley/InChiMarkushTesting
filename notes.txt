@@ -12,3 +12,8 @@
     - use largest common factor for core
     - user specified core
     - maybe ignore movable groups for now
+
+2023-10-06
+ - v2000 files do not support R groups with >2 attachments
+ - v3000 files do, however would require more significant rewrite of code to implement
+
