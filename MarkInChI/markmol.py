@@ -10,12 +10,26 @@ class MarkMol(object):
     """ This class is used for the conversion of a markush mol to a markush
         inchi."""
 
-    def __init__(self, name):
+    def __init__(self, name=None):
 
         # Open the SDF/MOL file containing the Markush structure and read the contents
-        file = open(name, "r")
-        content = file.readlines()
-        file.close()
+        # If MarkMol class was called with a specified file
+        if name != None:
+            file = open(name, "r")
+            content = file.readlines()
+            file.close()
+        # If user should enter directory manually
+        else:
+            file_read = False
+            while not file_read:
+                try:
+                    name = input("Enter the file name with the extension:")
+                    file = open(name, "r")
+                    content = file.readlines()
+                    file.close()
+                    file_read = True
+                except:
+                    print("File not found")
 
         # Initialize most of the global variables, set names for imported functions/classes
         self.help_label = Label() # Imported class for labeling atoms, finding their position given their label, etc.
@@ -1279,5 +1293,4 @@ class MarkMol(object):
 
 if __name__=="__main__":
     # Running the code independently
-    name = input("Enter the file name with the extension:")
-    mark_inchi_final = MarkMol(name)
+    mark_inchi_final = MarkMol()
