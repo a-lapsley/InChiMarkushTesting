@@ -23,7 +23,7 @@ class MarkMol3000(object):
                           )
                     return -1
                 else:
-                    self.molfile_lines = lines
+                    self.molfile_lines = lines 
                     return 1
         except:
             print("Unable to open file \'%s\'" % file_path)
