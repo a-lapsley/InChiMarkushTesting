@@ -40,7 +40,6 @@ class MarkMol(object):
         self.Rsubstituents = [] # List of lists of substituents associated with each R group
         self.ctabs = []  # Number of each substituent after $RGP
         self.connections = [] # Number of the "connecting" atom in each substituent
-        self.
         self.attachments = [] # List of lists of variable attachment points for each attachment
         self.XHn_groups = [] # Number of each XHn group (i.e. the atom representing it) in the original main block
         self.subst_order = [] # Order of R groups in the SDF file related to the R atoms in main block
@@ -1295,4 +1294,4 @@ class MarkMol(object):
 
 if __name__=="__main__":
     # Running the code independently
-    mark_inchi_final = MarkMol("D:\\alexl\Documents\InChiMarkushTesting\MarkInChI\marvin\\test5.sdf")
+    mark_inchi_final = MarkMol("D:\\alexl\\Documents\\InChiMarkushTesting\\MarkInChI\\marvin\\test11a.sdf")
